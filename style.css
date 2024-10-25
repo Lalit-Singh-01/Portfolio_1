@@ -26,6 +26,10 @@ img{
     border-right: 2rem solid rgba(0, 0, 0, 0.264);
     border-bottom: 1rem solid rgba(0, 0, 0, 0.264);
 }
+.profilepic img{
+    background-size: auto;
+    border-radius: 50%;
+}
 .navbar{
     background-color: rgb(79, 79, 207);
     background-color: rgba(0, 0, 0, 0.527);
@@ -103,6 +107,7 @@ img{
 .education{
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 .int-hob{
     /* background-color: black; */
@@ -143,6 +148,7 @@ img{
     justify-content: center;
     padding: 1rem;
     gap: 5rem;
+    flex-wrap: wrap;
 }
 .prj2{
     display: flex;
@@ -150,6 +156,7 @@ img{
     justify-content: center;
     padding: 1rem;
     gap: 5rem;
+    flex-wrap: wrap;
 }
 /*  */
 .prjcards {
@@ -265,10 +272,20 @@ form button{
     padding-left: 20rem;
     margin-top: 5rem;
 }
+#html{
+    padding-right: 1.7rem;
+}
+#css{
+    padding-right: 2.6rem;
+}
+#react{
+    padding-right: 0.8rem;
+}
 .bar{
-    height: 2rem;
+    height: 1rem;
     background-color: grey;
     width: 40rem;
+    border-radius: 3rem;
 }
 .skill{
     display: flex;
@@ -280,8 +297,181 @@ form button{
     background-color: goldenrod;
     height: 100%;
     width:38rem;
+    border-radius: 3rem;
+    /* animation: fill 5s ease-in-out 1s infinite normal; */
+    animation: bar 5s ease-in-out 1s infinite normal;
+}
+.progress1{
+    background-color: goldenrod;
+    height: 100%;
+    width:38rem;
+    border-radius: 3rem;
+    /* animation: fill 5s ease-in-out 1s infinite normal; */
+    animation: bar1 5s ease-in-out 1s infinite normal;
+}
+.progress2{
+    background-color: goldenrod;
+    height: 100%;
+    width:38rem;
+    border-radius: 3rem;
+    /* animation: fill 5s ease-in-out 1s infinite normal; */
+    animation: bar2 5s ease-in-out 1s infinite normal;
+}
+.progress3{
+    background-color: goldenrod;
+    height: 100%;
+    width:10rem;
+    border-radius: 3rem;
+    /* animation: fill 5s ease-in-out 1s infinite normal; */
+    animation: bar3 5s ease-in-out 1s infinite normal;
 }
 @keyframes bar {
-    from {width:10rem;}
-    to {width: 38rem;}
+    0%{width:1rem;}
+    100%{width: 90%;}
 }
+@keyframes bar1 {
+    0%{width:1rem;}
+    100%{width: 80%;}
+}
+@keyframes bar2 {
+    0%{width:1rem;}
+    100%{width: 50%;}
+}
+@keyframes bar3 {
+    0%{width:1rem;}
+    100%{width: 20%;}
+}
+@keyframes fill{
+    0%{background-color: inherit;}
+    100%{background-color: goldenrod;}
+}
+@media(width<600px){
+    .profilepic{
+        height:10rem;
+        width:10rem;
+        margin-left: 3rem;
+    }
+    .intro{
+        width: 100%;
+        width: fit-content;
+        position: absolute;
+        left: 0rem;
+        top: 20rem;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+    .intro h1{
+        font-size: 2rem;
+    }
+    .intro p{
+        font-size: 1rem;
+    }
+    .card{
+        margin-bottom: 1rem;
+    }
+    .projects{ 
+        height: fit-content;
+    }
+    .skills{
+        margin-top: 5rem;
+    }
+    .container{
+        padding-left: 0rem;
+    }
+    #react{
+        padding-right: 2rem;
+    }
+    .form{
+        width: 100%;
+    }
+    .form input{
+        width: fit-content;
+    }
+  
+}
+/* @media(max-width:350px){
+    form{
+        width: auto;
+    }
+    .form input{
+        width: auto;
+    }
+} */
+
+
+
+#logo{
+    width: 30rem;
+}
+.navbar{
+    justify-content: space-between;
+}
+.opt{
+    width: 50%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+.opt button{
+    width: fit-content;
+    margin: 1.5rem;
+    background-color: inherit;
+    border: none;
+    padding: 0.1rem;
+    transition-duration: 1s;
+}
+#menu{
+    display: none;
+}
+.opt button:hover{
+    transform: scale(1.2);
+    color: rgb(255, 220, 25);
+}
+  /* Navbar responsiveness */
+  @media(width<600px){
+    .opt button{
+        display:none;
+    }
+    #menu{
+        display: block;
+    }
+    .opt{
+        justify-content: flex-end;
+    }
+  }
+  .sidebar{
+    background-color: #110a24;
+    display: flex;
+    flex-direction: column;
+    height: 20rem;
+    width: 15rem;
+    box-shadow: 0.1rem 1rem 0.5rem black;
+    position: fixed;
+    top: 0rem;
+    z-index: 10;
+    right: -50rem;
+    transition: right 0.3s ease;
+    transition-duration: 1s;
+  }
+  /* #inactive{
+    right: -200rem;
+  } */
+  .active{
+    right :0;
+  }
+  .sidebtn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+  .sidebtn button{
+    width: 50%;
+    background-color: inherit;
+    border: none;
+    margin: 1rem;
+  }
+ .sidebtn button:hover{
+    transform: scale(1.2);
+    color: rgb(255, 220, 25);;
+ }

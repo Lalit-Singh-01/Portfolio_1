@@ -11,20 +11,21 @@
 <body>
     <!-- navbar start -->
     <div class="navbar">
-        <img src="" alt="logo">
-        <ul>
-            <li>Home</li>
-            <li>About</li>
-            <li>Project</li>
-            <li>Skill</li>
-            <li>Contact</li>
-        </ul>
+        <img id="logo" src="" alt="logo">
+        <div class="opt">
+            <button id="homebtn">Home</button>
+            <button id="aboutbtn">About</button>
+            <button id="projectbtn">Project</button>
+            <button id="skillbtn">Skill</button>
+            <button id="contactbtn">Contact</button>
+            <button id="menu"><i class="fa-solid fa-bars"></i></button>
+        </div>
     </div>
     <!-- navbar end -->
     <br><br><br><br><br><br>
         <!-- Home page start -->
-    <div class="homePage">
-         <div class="profilepic"></div>
+    <div id="home" class="homePage">
+         <div class="profilepic"><img src="depositphotos_136258168-stock-photo-ireland-countryside-tourist-attraction-in.jpg" alt=""></div>
          <div class="intro">
             <h1>Hi! there I am <span>Lalit Singh</span></h1>
             <p>I'm a web developer dedicated to creating responsive and engaging websites. With expertise in HTML, CSS, and JavaScript, I blend creativity with technical skills to deliver seamless user experiences. Always eager to learn, I stay updated with the latest industry trends.
@@ -33,7 +34,7 @@
     </div>
         <!-- Home page end -->
          <!-- About Page start -->
-    <div class="aboutPage">
+    <div id="about" class="aboutPage">
         <h1 id="headings">About me..</h1>
         <br>
         <div class="education">
@@ -43,7 +44,7 @@
                 <p class="description">I did my schooling from this school and got 80% in my 12th class and 92% in my 10th class.</p>
             </div>
             <div class="card">
-                <div class="img"><img src="ccdpsschool.avif" alt=""></div>
+                <div class="img"><img src="akgeccollege.jpg" alt=""></div>
                 <p class="title">Ch. Chhabil Dass Public School</p>
                 <p class="description">I did my schooling from this school and got 80% in my 12th class and 92% in my 10th class.</p>
             </div>
@@ -66,7 +67,7 @@
      <!-- About Page end -->
     <div class="empty"></div>
     <!-- Projects  start -->
-    <div class="projects">
+    <div id="project" class="projects">
         <h1 id="headings"> My Projects</h1>
         <br>
         <div class="prj">
@@ -121,38 +122,38 @@
     </div>
     <!-- projects end -->
      <!-- skills -->
-      <div class="skills">
+      <div id="skill" class="skills">
         <h1 id="headings">My Skills</h1>
         <div class="container">
             <div class="skill">
                 <i class="fa-solid fa-code"></i>
-                <p>HTML</p>
-                <div class="bar"></div>
+                <p id="html">HTML </p>
+                <div class="bar"><div class="progress"></div></div>
             </div>
             <div class="skill">
                 <i class="fa-brands fa-css3-alt"></i>
-                <p>CSS</p>
-                <div class="bar"></div>
+                <p id="css">CSS</p>
+                <div class="bar"><div class="progress1"></div></div>
             </div>
             <div class="skill">
                 <i class="fa-brands fa-js"></i>
-                <p>JavaScript</p>
-                <div class="bar"></div>
+                <p id="js">JavaScript</p>
+                <div class="bar"><div class="progress2"></div></div>
             </div>
             <div class="skill">
                 <i class="fa-brands fa-react"></i>
-                <p>React Js</p>
-                <div class="bar"></div>
+                <p id="react">React Js</p>
+                <div class="bar"><div class="progress3"></div></div>
             </div>
         </div>
       </div>
     <!-- skills end -->
      <br><br>
      <!-- contact page  -->
-      <div class="contactPage">
+      <div id="contact" class="contactPage">
         <h1 id="heading">Contact Me</h1>
         <div class="form">
-            <form action="">
+            <form id="registrationForm">
                 <div class="name">
                     <div class="item">
                         <label for="Fname">First Name</label>
@@ -171,9 +172,20 @@
                     <label for="message">Message</label>
                     <textarea  placeholder="Message" name="Message" id="message" rows="5" cols="18"></textarea>
                 </div>
-                <button>Submit</button>
+                <button type="submit">Submit</button>
             </form>
         </div>
       </div>
+      <div class="sidebar">
+        <div class="cross"><i class="fa-solid fa-xmark"></i></div>
+        <div class="sidebtn">
+         <button id="sidehome">Home</button>
+         <button id="sideabout">About</button>
+         <button id="sideproject">Projects</button>
+         <button id="sideskill">Skill</button>
+         <button id="contact">Contact</button>
+        </div>
+       </div>
+       <script src="script.js"></script>
 </body>
 </html>
